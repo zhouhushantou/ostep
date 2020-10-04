@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/wcat.dir/wcat.c.o CMakeFiles/wcat.dir/wgrep.c.o  -o wcat 

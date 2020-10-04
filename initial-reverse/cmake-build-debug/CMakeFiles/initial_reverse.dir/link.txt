@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/initial_reverse.dir/initial_reverse.c.o  -o initial_reverse 

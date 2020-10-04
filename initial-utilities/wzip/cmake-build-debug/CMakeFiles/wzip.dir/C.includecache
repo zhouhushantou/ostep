@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hushantou/ostep-projects/initial-utilities/wzip/wzip.c
+stdlib.h
+-
+string.h
+-
+stdio.h
+/home/hushantou/ostep-projects/initial-utilities/wzip/stdio.h
+
