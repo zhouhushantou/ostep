@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/processes_shell.dir/wish.c.o  -o processes_shell 

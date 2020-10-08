@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hushantou/ostep-homework/thread-lock-usage/linklist.c
+sys/time.h
+-
+stddef.h
+-
+stdio.h
+-
+pthread.h
+-
+malloc.h
+-
+
