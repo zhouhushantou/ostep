@@ -1,0 +1,1 @@
+/usr/bin/cc  -pthread -g   CMakeFiles/concurrency_mapreduce.dir/bst.c.o  -o concurrency_mapreduce 

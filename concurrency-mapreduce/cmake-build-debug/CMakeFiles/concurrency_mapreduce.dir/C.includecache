@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../common_thread.h
+pthread.h
+-
+assert.h
+-
+sched.h
+-
+semaphore.h
+-
+
+/home/hushantou/ostep-projects/concurrency-mapreduce/bst.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+assert.h
+-
+pthread.h
+-
+common_thread.h
+-
+
