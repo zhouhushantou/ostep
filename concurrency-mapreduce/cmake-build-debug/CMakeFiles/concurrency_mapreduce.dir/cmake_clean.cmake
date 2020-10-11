@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/concurrency_mapreduce.dir/bst.c.o"
+  "CMakeFiles/concurrency_mapreduce.dir/mapreduce.c.o"
   "concurrency_mapreduce"
   "concurrency_mapreduce.pdb"
 )

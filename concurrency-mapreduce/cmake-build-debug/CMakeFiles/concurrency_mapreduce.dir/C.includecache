@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+../bst.h
+
 ../common_thread.h
 pthread.h
 -
@@ -16,17 +18,21 @@ sched.h
 semaphore.h
 -
 
-/home/hushantou/ostep-projects/concurrency-mapreduce/bst.c
+../mapreduce.h
+
+/home/hushantou/ostep-projects/concurrency-mapreduce/mapreduce.c
+mapreduce.h
+-
+common_thread.h
+-
+bst.h
+-
 stdio.h
 -
 stdlib.h
 -
 string.h
 -
-assert.h
--
-pthread.h
--
-common_thread.h
+sys/time.h
 -
 

@@ -170,6 +170,33 @@ bst.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/concurrency_mapreduce.dir/build.make CMakeFiles/concurrency_mapreduce.dir/bst.c.s
 .PHONY : bst.c.s
 
+mapreduce.o: mapreduce.c.o
+
+.PHONY : mapreduce.o
+
+# target to build an object file
+mapreduce.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/concurrency_mapreduce.dir/build.make CMakeFiles/concurrency_mapreduce.dir/mapreduce.c.o
+.PHONY : mapreduce.c.o
+
+mapreduce.i: mapreduce.c.i
+
+.PHONY : mapreduce.i
+
+# target to preprocess a source file
+mapreduce.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/concurrency_mapreduce.dir/build.make CMakeFiles/concurrency_mapreduce.dir/mapreduce.c.i
+.PHONY : mapreduce.c.i
+
+mapreduce.s: mapreduce.c.s
+
+.PHONY : mapreduce.s
+
+# target to generate assembly for a file
+mapreduce.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/concurrency_mapreduce.dir/build.make CMakeFiles/concurrency_mapreduce.dir/mapreduce.c.s
+.PHONY : mapreduce.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -182,6 +209,9 @@ help:
 	@echo "... bst.o"
 	@echo "... bst.i"
 	@echo "... bst.s"
+	@echo "... mapreduce.o"
+	@echo "... mapreduce.i"
+	@echo "... mapreduce.s"
 .PHONY : help
 
 

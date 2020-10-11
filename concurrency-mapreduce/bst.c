@@ -11,25 +11,24 @@ typedef struct node
     struct node *left;
     struct node *right;
     char * key;
-    char value;
+    char * value;
 } node;
 
-node * root=NULL;
-
 //creat a new node
-node *newNode(char * key,char value)
+node *newNode(char * key,char *value)
 {
     node *t = (node *)malloc(sizeof(node));
     t->key=(char *)malloc(sizeof(key));
     strcpy(t->key,key);
-    t->value=value;
+    t->value=(char *)malloc(sizeof(value));
+    strcpy(t->value,value);
     t->left = NULL;
     t->right = NULL;
     return t;
 }
 
 //add a new node to the tree
-node *addNode(node *rootNode, char * key,char value)
+node *addNode(node *rootNode, char * key,char * value)
 {
     if (rootNode == NULL)
     {
@@ -66,18 +65,33 @@ void cleanTree(node *root)
     }
 }
 
-int N=0;
+int NC=0;
 void printTree(node *root)
 {
     if (root != NULL)
     {
         printTree(root->left);
-        printf("%d %s %c\n", N++,root->key,root->value);
+        printf("%d %s %s\n", NC++,root->key,root->value);
         printTree(root->right);
     }
 }
 
-pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+void countKey(node *root,char * key,int * count)
+{
+
+    if (root != NULL)
+    {
+        countKey(root->left,key,count);
+        if(strcmp(root->key,key)>0)
+            return;
+        if(strcmp(root->key,key)==0) {
+            (*count)++;
+        }
+        countKey(root->right,key,count);
+    }
+}
+
+/*pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 void *map(void * fileName){
     printf("thread: %lu started\n",pthread_self());
     FILE *fp = fopen((char *)fileName, "r");
@@ -89,7 +103,7 @@ void *map(void * fileName){
         while ((token = strsep(&dummy, " \t\n\r")) != NULL) {
             Pthread_mutex_lock(&lock);
             root=addNode(root,token, '1');
-           Pthread_mutex_unlock(&lock);
+            Pthread_mutex_unlock(&lock);
         }
     }
     free(line);
@@ -112,4 +126,4 @@ void main(){
 
     printTree(root);
     cleanTree(root);
-}
+}*/

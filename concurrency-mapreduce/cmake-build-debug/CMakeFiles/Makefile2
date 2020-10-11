@@ -94,12 +94,12 @@ clean: CMakeFiles/concurrency_mapreduce.dir/clean
 CMakeFiles/concurrency_mapreduce.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/concurrency_mapreduce.dir/build.make CMakeFiles/concurrency_mapreduce.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/concurrency_mapreduce.dir/build.make CMakeFiles/concurrency_mapreduce.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hushantou/ostep-projects/concurrency-mapreduce/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target concurrency_mapreduce"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hushantou/ostep-projects/concurrency-mapreduce/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target concurrency_mapreduce"
 .PHONY : CMakeFiles/concurrency_mapreduce.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/concurrency_mapreduce.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hushantou/ostep-projects/concurrency-mapreduce/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hushantou/ostep-projects/concurrency-mapreduce/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/concurrency_mapreduce.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hushantou/ostep-projects/concurrency-mapreduce/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/concurrency_mapreduce.dir/rule

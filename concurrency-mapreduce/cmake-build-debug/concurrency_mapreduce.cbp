@@ -81,7 +81,13 @@
 		<Unit filename="/home/hushantou/ostep-projects/concurrency-mapreduce/bst.c">
 			<Option target="concurrency_mapreduce"/>
 		</Unit>
+		<Unit filename="/home/hushantou/ostep-projects/concurrency-mapreduce/bst.h">
+			<Option target="concurrency_mapreduce"/>
+		</Unit>
 		<Unit filename="/home/hushantou/ostep-projects/concurrency-mapreduce/common_thread.h">
+			<Option target="concurrency_mapreduce"/>
+		</Unit>
+		<Unit filename="/home/hushantou/ostep-projects/concurrency-mapreduce/mapreduce.c">
 			<Option target="concurrency_mapreduce"/>
 		</Unit>
 		<Unit filename="/home/hushantou/ostep-projects/concurrency-mapreduce/mapreduce.h">

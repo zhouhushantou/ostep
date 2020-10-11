@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/hushantou/ostep-projects/concurrency-mapreduce/bst.c" "/home/hushantou/ostep-projects/concurrency-mapreduce/cmake-build-debug/CMakeFiles/concurrency_mapreduce.dir/bst.c.o"
+  "/home/hushantou/ostep-projects/concurrency-mapreduce/mapreduce.c" "/home/hushantou/ostep-projects/concurrency-mapreduce/cmake-build-debug/CMakeFiles/concurrency_mapreduce.dir/mapreduce.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

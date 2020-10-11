@@ -4,3 +4,8 @@
 CMakeFiles/concurrency_mapreduce.dir/bst.c.o
  ../common_thread.h
  /home/hushantou/ostep-projects/concurrency-mapreduce/bst.c
+CMakeFiles/concurrency_mapreduce.dir/mapreduce.c.o
+ ../bst.h
+ ../common_thread.h
+ ../mapreduce.h
+ /home/hushantou/ostep-projects/concurrency-mapreduce/mapreduce.c
