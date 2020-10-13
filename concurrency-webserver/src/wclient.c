@@ -19,6 +19,7 @@
 // When we test your server, we will be using modifications to this client.
 //
 
+#include <pthread.h>
 #include "io_helper.h"
 
 #define MAXBUF (8192)
@@ -66,11 +67,20 @@ void client_print(int fd) {
     }
 }
 
-int main(int argc, char *argv[]) {
-    char *host, *filename;
-    int port;
+char *host, *filename;
+int port;
+void *client_thread(){
     int clientfd;
-    
+    /* Open a single connection to the specified host and port */
+    clientfd = open_client_fd_or_die(host, port);
+    client_send(clientfd, filename);
+
+    client_print(clientfd);
+    close_or_die(clientfd);
+}
+
+int main(int argc, char *argv[]) {
+
     if (argc != 4) {
 	fprintf(stderr, "Usage: %s <host> <port> <filename>\n", argv[0]);
 	exit(1);
@@ -79,14 +89,15 @@ int main(int argc, char *argv[]) {
     host = argv[1];
     port = atoi(argv[2]);
     filename = argv[3];
-    
-    /* Open a single connection to the specified host and port */
-    clientfd = open_client_fd_or_die(host, port);
-    
-    client_send(clientfd, filename);
-    client_print(clientfd);
-    
-    close_or_die(clientfd);
-    
+    pthread_t * worker=(pthread_t *) malloc(8*sizeof(pthread_t));
+
+    for(int i=0;i<8;i++) {
+        pthread_create(&worker[i], NULL, client_thread, NULL);
+    }
+
+    for(int i=0;i<8;i++) {
+        pthread_join(worker[i], NULL);
+    }
+
     exit(0);
 }

@@ -1,0 +1,1 @@
+/usr/bin/cc  -pthread -g   CMakeFiles/src.dir/io_helper.c.o CMakeFiles/src.dir/request.c.o CMakeFiles/src.dir/wserver.c.o  -o src 
